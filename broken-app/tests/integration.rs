@@ -9,7 +9,7 @@ fn sums_even_numbers() {
     let nums = [1, 2, 3, 4];
     assert_eq!(sum_even(&nums), 6);
 
-    // Только не четные что бы ничего не сумировалось
+    // Только нечетные что бы ничего не сумировалось
     let nums = [1, 3, 5, 7];
     assert_eq!(sum_even(&nums), 0);
 
@@ -43,13 +43,29 @@ fn counts_non_zero_bytes() {
 
 #[test]
 fn dedup_preserves_uniques() {
+
     let uniq = algo::slow_dedup(&[5, 5, 1, 2, 2, 3]);
-    assert_eq!(uniq, vec![1, 2, 3, 5]); // порядок и состав важны
+    assert_eq!(uniq, vec![1, 2, 3, 5]);
+
+    let uniq = algo::slow_dedup(&[5, 5, 5, 5, 5, 5]);
+    assert_eq!(uniq, vec![5]);
+
+    let uniq = algo::slow_dedup(&[5, 5, 3, 3, 4, 4, 1, 1, 2, 2]);
+    assert_eq!(uniq, vec![1, 2, 3, 4, 5]);
+
+    let uniq = algo::slow_dedup(&[]);
+    assert_eq!(uniq, vec![]);
 }
 
 #[test]
 fn fib_small_numbers() {
     assert_eq!(algo::slow_fib(10), 55);
+    assert_eq!(algo::slow_fib(3), 2);
+    assert_eq!(algo::slow_fib(7), 13);
+    assert_eq!(algo::slow_fib(30), 832040);
+    assert_eq!(algo::slow_fib(1), 1);
+    assert_eq!(algo::slow_fib(0), 0);
+
 }
 
 #[test]

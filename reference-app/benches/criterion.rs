@@ -1,4 +1,4 @@
-use criterion::{criterion_group, criterion_main, BatchSize, Criterion};
+use criterion::{criterion_group, criterion_main, BatchSize, Criterion, PlottingBackend};
 use reference_app::{algo, sum_even};
 
 fn bench_sum_even(c: &mut Criterion) {
@@ -23,5 +23,14 @@ fn bench_dedup(c: &mut Criterion) {
     });
 }
 
-criterion_group!(benches, bench_sum_even, bench_fib, bench_dedup);
+fn custom_criterion() -> Criterion {
+    Criterion::default()
+        .plotting_backend(PlottingBackend::Plotters)
+}
+
+criterion_group! {
+    name = benches;
+    config = custom_criterion();
+    targets = bench_sum_even, bench_fib, bench_dedup
+}
 criterion_main!(benches);

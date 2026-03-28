@@ -1,13 +1,9 @@
 # broken_app
 
-RUSTFLAGS="-Zsanitizer=thread" \
-cargo +nightly test \
--Zbuild-std \
---target x86_64-unknown-linux-gnu \
---lib --tests --bins
-
-RUSTFLAGS="-Zsanitizer=address" \
-cargo +nightly test \
--Zbuild-std \
---target x86_64-unknown-linux-gnu \
---lib --tests --bins
+cargo run --bin demo &> ../checks/step-1/broken-app-after/cargorunbin
+cargo check &> ../checks/step-1/broken-app-after/cargocheck
+cargo test &> ../checks/step-1/broken-app-after/cargotest
+cargo +nightly miri test &> ../checks/step-1/broken-app-after/miri
+valgrind --leak-check=full cargo test --tests &> ../checks/step-1/broken-app-after/valgrind
+RUSTFLAGS="-Zsanitizer=thread" cargo +nightly test -Zbuild-std --target x86_64-unknown-linux-gnu --lib --tests --bins &> ../checks/step-1/broken-app-after/sanitizers-thread
+RUSTFLAGS="-Zsanitizer=address" cargo +nightly test -Zbuild-std --target x86_64-unknown-linux-gnu --lib --tests --bins &> ../checks/step-1/broken-app-after/sanitizers-address 

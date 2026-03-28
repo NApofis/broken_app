@@ -6,12 +6,14 @@ pub mod concurrency;
 /// из-за чего возникает UB при доступе за пределы среза.
 pub fn sum_even(values: &[i64]) -> i64 {
     let mut acc = 0;
-    unsafe {
-        for idx in 0..=values.len() {
-            let v = *values.get_unchecked(idx);
-            if v % 2 == 0 {
-                acc += v;
-            }
+    for idx in 0..values.len() {
+        // SAFETY
+        // - длины памяти values должно хватать на idx элементов с типом i64
+        let v = unsafe {
+            *values.get_unchecked(idx)
+        };
+        if v % 2 == 0 {
+            acc += v;
         }
     }
     acc
@@ -25,13 +27,18 @@ pub fn leak_buffer(input: &[u8]) -> usize {
     let raw = Box::into_raw(boxed) as *mut u8;
 
     let mut count = 0;
+    // SAFETY
+    // - памяти raw должно хватить на len элементов u8
+    // - raw должен быть не нулевым
+    // - элементы в памяти raw ОБЯЗАТЕЛЬНО должны быть u8
     unsafe {
         for i in 0..len {
-            if *raw.add(i) != 0_u8 {
+            if *raw.add(size_of::<u8>() * i) != 0_u8 {
                 count += 1;
             }
         }
-        // утечка: не вызываем Box::from_raw(raw);
+        let slice_raw = std::slice::from_raw_parts_mut(raw, len);
+        let _ = Box::from_raw(slice_raw);
     }
     count
 }
@@ -45,19 +52,36 @@ pub fn normalize(input: &str) -> String {
 /// Логическая ошибка: усредняет по всем элементам, хотя требуется учитывать
 /// только положительные. Деление на длину среза даёт неверный результат.
 pub fn average_positive(values: &[i64]) -> f64 {
-    let sum: i64 = values.iter().sum();
-    if values.is_empty() {
-        return 0.0;
+    let mut count: i64 = 0;
+
+    let sum: i64 = values.iter().filter(|x| {
+        x.is_positive()
+    }).map(|x| {
+        count += 1;
+        x
+    }).sum();
+
+    if count == 0 {
+        return 0f64;
     }
-    sum as f64 / values.len() as f64
+
+    sum as f64 / count as f64
 }
 
 /// Use-after-free: возвращает значение после освобождения бокса.
 /// UB, проявится под ASan/Miri.
-pub unsafe fn use_after_free() -> i32 {
-    let b = Box::new(42_i32);
+pub unsafe fn use_after_free(val: i32) -> i32 {
+    let b = Box::new(val);
     let raw = Box::into_raw(b);
-    let val = *raw;
-    drop(Box::from_raw(raw));
-    val + *raw
+    let mut val= 0;
+
+    if !raw.is_null() {
+        // SAFETY
+        // - raw должен быть не нулевым
+        unsafe {
+            val = *raw;
+            drop(Box::from_raw(raw));
+        }
+    }
+    val
 }

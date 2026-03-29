@@ -1,6 +1,6 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" width="1200" height="598" onload="init(evt)" viewBox="0 0 1200 598" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg version="1.1" width="1200" height="582" onload="init(evt)" viewBox="0 0 1200 582" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <!-- Flame graph stack visualization. See https://github.com/brendangregg/FlameGraph for latest version, and http://www.brendangregg.com/flamegraphs.html for examples. -->
 <!-- NOTES:  -->
 <defs>
@@ -422,285 +422,289 @@
 	}
 ]]>
 </script>
-<rect x="0.0" y="0" width="1200.0" height="598.0" fill="url(#background)"  />
+<rect x="0.0" y="0" width="1200.0" height="582.0" fill="url(#background)"  />
 <text id="title" x="600.00" y="24" >Flame Graph</text>
-<text id="details" x="10.00" y="581" > </text>
+<text id="details" x="10.00" y="565" > </text>
 <text id="unzoom" x="10.00" y="24" class="hide">Reset Zoom</text>
 <text id="search" x="1090.00" y="24" >Search</text>
 <text id="ignorecase" x="1174.00" y="24" >ic</text>
-<text id="matched" x="1090.00" y="581" > </text>
+<text id="matched" x="1090.00" y="565" > </text>
 <g id="frames">
 <g >
-<title>__sysvec_apic_timer_interrupt (15,304,794 samples, 1.49%)</title><rect x="1118.4" y="133" width="17.6" height="15.0" fill="rgb(242,173,41)" rx="2" ry="2" />
-<text  x="1121.40" y="143.5" ></text>
+<title>vfs_write (197,014,560 samples, 82.70%)</title><rect x="191.9" y="293" width="975.9" height="15.0" fill="rgb(250,209,50)" rx="2" ry="2" />
+<text  x="194.89" y="303.5" >vfs_write</text>
 </g>
 <g >
-<title>sched_balance_trigger (15,289,208 samples, 1.49%)</title><rect x="899.4" y="357" width="17.6" height="15.0" fill="rgb(213,38,9)" rx="2" ry="2" />
-<text  x="902.40" y="367.5" ></text>
+<title>try_to_block_task.constprop.0.isra.0 (15,802,694 samples, 6.63%)</title><rect x="1029.7" y="149" width="78.3" height="15.0" fill="rgb(247,194,46)" rx="2" ry="2" />
+<text  x="1032.74" y="159.5" >try_to_bl..</text>
 </g>
 <g >
-<title>vfs_write (144,169,306 samples, 14.05%)</title><rect x="989.8" y="309" width="165.7" height="15.0" fill="rgb(250,209,50)" rx="2" ry="2" />
-<text  x="992.75" y="319.5" >vfs_write</text>
+<title>try_to_wake_up (34,581,193 samples, 14.52%)</title><rect x="726.9" y="101" width="171.3" height="15.0" fill="rgb(220,70,16)" rx="2" ry="2" />
+<text  x="729.91" y="111.5" >try_to_wake_up</text>
 </g>
 <g >
-<title>asm_sysvec_apic_timer_interrupt (30,593,477 samples, 2.98%)</title><rect x="899.4" y="485" width="35.2" height="15.0" fill="rgb(232,127,30)" rx="2" ry="2" />
-<text  x="902.40" y="495.5" >as..</text>
+<title>update_load_avg (15,802,694 samples, 6.63%)</title><rect x="1029.7" y="69" width="78.3" height="15.0" fill="rgb(240,165,39)" rx="2" ry="2" />
+<text  x="1032.74" y="79.5" >update_lo..</text>
 </g>
 <g >
-<title>n_tty_write (142,502,640 samples, 13.88%)</title><rect x="989.8" y="245" width="163.8" height="15.0" fill="rgb(210,23,5)" rx="2" ry="2" />
-<text  x="992.75" y="255.5" >n_tty_write</text>
+<title>dequeue_entities (15,802,694 samples, 6.63%)</title><rect x="1029.7" y="101" width="78.3" height="15.0" fill="rgb(241,166,39)" rx="2" ry="2" />
+<text  x="1032.74" y="111.5" >dequeue_e..</text>
 </g>
 <g >
-<title>core::slice::memchr::memrchr (14,832,287 samples, 1.45%)</title><rect x="1172.9" y="405" width="17.1" height="15.0" fill="rgb(205,3,0)" rx="2" ry="2" />
-<text  x="1175.95" y="415.5" ></text>
+<title>wake_up_process (34,581,193 samples, 14.52%)</title><rect x="726.9" y="117" width="171.3" height="15.0" fill="rgb(213,37,8)" rx="2" ry="2" />
+<text  x="729.91" y="127.5" >wake_up_process</text>
 </g>
 <g >
-<title>clear_pending_if_disabled (15,297,631 samples, 1.49%)</title><rect x="1136.0" y="165" width="17.6" height="15.0" fill="rgb(222,82,19)" rx="2" ry="2" />
-<text  x="1139.00" y="175.5" ></text>
+<title>&lt;std::io::default_write_fmt::Adapter&lt;T&gt; as core::fmt::Write&gt;::write_str (223,259,229 samples, 93.72%)</title><rect x="61.9" y="421" width="1105.9" height="15.0" fill="rgb(252,217,51)" rx="2" ry="2" />
+<text  x="64.90" y="431.5" >&lt;std::io::default_write_fmt::Adapter&lt;T&gt; as core::fmt::Write&gt;::write_str</text>
 </g>
 <g >
-<title>tick_nohz_handler (15,304,794 samples, 1.49%)</title><rect x="1118.4" y="85" width="17.6" height="15.0" fill="rgb(248,200,48)" rx="2" ry="2" />
-<text  x="1121.40" y="95.5" ></text>
+<title>demo (238,223,198 samples, 100.00%)</title><rect x="10.0" y="517" width="1180.0" height="15.0" fill="rgb(243,179,42)" rx="2" ry="2" />
+<text  x="13.00" y="527.5" >demo</text>
 </g>
 <g >
-<title>tick_nohz_handler (30,593,477 samples, 2.98%)</title><rect x="899.4" y="405" width="35.2" height="15.0" fill="rgb(248,200,48)" rx="2" ry="2" />
-<text  x="902.40" y="415.5" >ti..</text>
+<title>native_queued_spin_lock_slowpath (20,460,283 samples, 8.59%)</title><rect x="726.9" y="37" width="101.4" height="15.0" fill="rgb(238,153,36)" rx="2" ry="2" />
+<text  x="729.91" y="47.5" >native_queue..</text>
 </g>
 <g >
-<title>housekeeping_cpumask (15,289,208 samples, 1.49%)</title><rect x="899.4" y="325" width="17.6" height="15.0" fill="rgb(252,217,52)" rx="2" ry="2" />
-<text  x="902.40" y="335.5" ></text>
+<title>mutex_unlock (1,666,666 samples, 0.70%)</title><rect x="299.5" y="229" width="8.2" height="15.0" fill="rgb(251,212,50)" rx="2" ry="2" />
+<text  x="302.45" y="239.5" ></text>
 </g>
 <g >
-<title>__sysvec_apic_timer_interrupt (30,593,477 samples, 2.98%)</title><rect x="899.4" y="453" width="35.2" height="15.0" fill="rgb(242,173,41)" rx="2" ry="2" />
-<text  x="902.40" y="463.5" >__..</text>
+<title>tty_write_room (10,582,756 samples, 4.44%)</title><rect x="908.4" y="213" width="52.4" height="15.0" fill="rgb(245,188,45)" rx="2" ry="2" />
+<text  x="911.40" y="223.5" >tty_w..</text>
 </g>
 <g >
-<title>process_output_block (111,900,859 samples, 10.90%)</title><rect x="1024.9" y="229" width="128.7" height="15.0" fill="rgb(252,216,51)" rx="2" ry="2" />
-<text  x="1027.93" y="239.5" >process_output_b..</text>
+<title>process_output_block (91,826,037 samples, 38.55%)</title><rect x="453.6" y="213" width="454.8" height="15.0" fill="rgb(252,216,51)" rx="2" ry="2" />
+<text  x="456.55" y="223.5" >process_output_block</text>
 </g>
 <g >
-<title>entry_SYSCALL_64_after_hwframe (174,644,410 samples, 17.02%)</title><rect x="972.2" y="389" width="200.7" height="15.0" fill="rgb(218,63,15)" rx="2" ry="2" />
-<text  x="975.16" y="399.5" >entry_SYSCALL_64_after_hwf..</text>
+<title>mutex_lock (1,666,666 samples, 0.70%)</title><rect x="500.9" y="197" width="8.3" height="15.0" fill="rgb(217,57,13)" rx="2" ry="2" />
+<text  x="503.94" y="207.5" ></text>
 </g>
 <g >
-<title>__smp_call_single_queue (6,448,098 samples, 0.63%)</title><rect x="1060.1" y="85" width="7.4" height="15.0" fill="rgb(219,66,15)" rx="2" ry="2" />
-<text  x="1063.09" y="95.5" ></text>
+<title>_raw_spin_lock_irqsave (10,151,569 samples, 4.26%)</title><rect x="828.3" y="85" width="50.2" height="15.0" fill="rgb(247,195,46)" rx="2" ry="2" />
+<text  x="831.25" y="95.5" >_raw_..</text>
 </g>
 <g >
-<title>tty_ldisc_ref_wait (1,666,666 samples, 0.16%)</title><rect x="1153.6" y="261" width="1.9" height="15.0" fill="rgb(217,55,13)" rx="2" ry="2" />
-<text  x="1156.59" y="271.5" ></text>
+<title>__schedule (15,802,694 samples, 6.63%)</title><rect x="1029.7" y="165" width="78.3" height="15.0" fill="rgb(227,103,24)" rx="2" ry="2" />
+<text  x="1032.74" y="175.5" >__schedule</text>
 </g>
 <g >
-<title>update_process_times (15,304,794 samples, 1.49%)</title><rect x="1118.4" y="69" width="17.6" height="15.0" fill="rgb(250,209,50)" rx="2" ry="2" />
-<text  x="1121.40" y="79.5" ></text>
+<title>tty_insert_flip_string_and_push_buffer (80,593,409 samples, 33.83%)</title><rect x="509.2" y="181" width="399.2" height="15.0" fill="rgb(217,55,13)" rx="2" ry="2" />
+<text  x="512.19" y="191.5" >tty_insert_flip_string_and_push_buffer</text>
 </g>
 <g >
-<title>__hrtimer_run_queues (15,304,794 samples, 1.49%)</title><rect x="1118.4" y="101" width="17.6" height="15.0" fill="rgb(237,150,35)" rx="2" ry="2" />
-<text  x="1121.40" y="111.5" ></text>
+<title>pty_write (80,593,409 samples, 33.83%)</title><rect x="509.2" y="197" width="399.2" height="15.0" fill="rgb(210,23,5)" rx="2" ry="2" />
+<text  x="512.19" y="207.5" >pty_write</text>
 </g>
 <g >
-<title>broken_app::normalize (15,302,416 samples, 1.49%)</title><rect x="934.6" y="501" width="17.6" height="15.0" fill="rgb(224,91,21)" rx="2" ry="2" />
-<text  x="937.57" y="511.5" ></text>
+<title>__GI___libc_write (223,259,229 samples, 93.72%)</title><rect x="61.9" y="389" width="1105.9" height="15.0" fill="rgb(217,57,13)" rx="2" ry="2" />
+<text  x="64.90" y="399.5" >__GI___libc_write</text>
 </g>
 <g >
-<title>sysvec_apic_timer_interrupt (15,304,794 samples, 1.49%)</title><rect x="1118.4" y="149" width="17.6" height="15.0" fill="rgb(220,69,16)" rx="2" ry="2" />
-<text  x="1121.40" y="159.5" ></text>
+<title>queue_work_on (63,779,433 samples, 26.77%)</title><rect x="592.5" y="165" width="315.9" height="15.0" fill="rgb(248,200,48)" rx="2" ry="2" />
+<text  x="595.48" y="175.5" >queue_work_on</text>
 </g>
 <g >
-<title>task_tick_fair (15,304,269 samples, 1.49%)</title><rect x="917.0" y="357" width="17.6" height="15.0" fill="rgb(217,57,13)" rx="2" ry="2" />
-<text  x="919.97" y="367.5" ></text>
+<title>tty_write (197,014,560 samples, 82.70%)</title><rect x="191.9" y="277" width="975.9" height="15.0" fill="rgb(234,134,32)" rx="2" ry="2" />
+<text  x="194.89" y="287.5" >tty_write</text>
 </g>
 <g >
-<title>broken_app::algo::slow_fib (804,178,199 samples, 78.35%)</title><rect x="10.0" y="501" width="924.6" height="15.0" fill="rgb(219,67,16)" rx="2" ry="2" />
-<text  x="13.00" y="511.5" >broken_app::algo::slow_fib</text>
+<title>_raw_spin_lock (2,059,103 samples, 0.86%)</title><rect x="898.2" y="149" width="10.2" height="15.0" fill="rgb(239,160,38)" rx="2" ry="2" />
+<text  x="901.20" y="159.5" ></text>
 </g>
 <g >
-<title>sysvec_apic_timer_interrupt (30,593,477 samples, 2.98%)</title><rect x="899.4" y="469" width="35.2" height="15.0" fill="rgb(220,69,16)" rx="2" ry="2" />
-<text  x="902.40" y="479.5" >sy..</text>
+<title>file_tty_write.isra.0 (197,014,560 samples, 82.70%)</title><rect x="191.9" y="261" width="975.9" height="15.0" fill="rgb(244,182,43)" rx="2" ry="2" />
+<text  x="194.89" y="271.5" >file_tty_write.isra.0</text>
 </g>
 <g >
-<title>x64_sys_call (144,169,306 samples, 14.05%)</title><rect x="989.8" y="357" width="165.7" height="15.0" fill="rgb(247,194,46)" rx="2" ry="2" />
-<text  x="992.75" y="367.5" >x64_sys_call</text>
+<title>__queue_work (46,462,332 samples, 19.50%)</title><rect x="668.1" y="149" width="230.1" height="15.0" fill="rgb(212,34,8)" rx="2" ry="2" />
+<text  x="671.06" y="159.5" >__queue_work</text>
 </g>
 <g >
-<title>update_cfs_group (15,304,269 samples, 1.49%)</title><rect x="917.0" y="341" width="17.6" height="15.0" fill="rgb(242,174,41)" rx="2" ry="2" />
-<text  x="919.97" y="351.5" ></text>
+<title>all (238,223,198 samples, 100%)</title><rect x="10.0" y="533" width="1180.0" height="15.0" fill="rgb(213,39,9)" rx="2" ry="2" />
+<text  x="13.00" y="543.5" ></text>
 </g>
 <g >
-<title>kick_pool (21,721,667 samples, 2.12%)</title><rect x="1042.5" y="149" width="25.0" height="15.0" fill="rgb(244,181,43)" rx="2" ry="2" />
-<text  x="1045.53" y="159.5" >k..</text>
+<title>raw_spin_rq_lock_nested (20,460,283 samples, 8.59%)</title><rect x="726.9" y="69" width="101.4" height="15.0" fill="rgb(206,5,1)" rx="2" ry="2" />
+<text  x="729.91" y="79.5" >raw_spin_rq_..</text>
 </g>
 <g >
-<title>hrtimer_interrupt (30,593,477 samples, 2.98%)</title><rect x="899.4" y="437" width="35.2" height="15.0" fill="rgb(228,109,26)" rx="2" ry="2" />
-<text  x="902.40" y="447.5" >hr..</text>
+<title>[unknown] (238,223,198 samples, 100.00%)</title><rect x="10.0" y="501" width="1180.0" height="15.0" fill="rgb(210,24,5)" rx="2" ry="2" />
+<text  x="13.00" y="511.5" >[unknown]</text>
 </g>
 <g >
-<title>asm_sysvec_apic_timer_interrupt (15,304,794 samples, 1.49%)</title><rect x="1118.4" y="165" width="17.6" height="15.0" fill="rgb(232,127,30)" rx="2" ry="2" />
-<text  x="1121.40" y="175.5" ></text>
+<title>dequeue_task_fair (15,802,694 samples, 6.63%)</title><rect x="1029.7" y="117" width="78.3" height="15.0" fill="rgb(230,119,28)" rx="2" ry="2" />
+<text  x="1032.74" y="127.5" >dequeue_t..</text>
 </g>
 <g >
-<title>&lt;std::io::default_write_fmt::Adapter&lt;T&gt; as core::fmt::Write&gt;::write_str (204,757,103 samples, 19.95%)</title><rect x="954.6" y="437" width="235.4" height="15.0" fill="rgb(252,217,51)" rx="2" ry="2" />
-<text  x="957.59" y="447.5" >&lt;std::io::default_write_fmt::Ad..</text>
+<title>schedule (15,802,694 samples, 6.63%)</title><rect x="1029.7" y="181" width="78.3" height="15.0" fill="rgb(254,229,54)" rx="2" ry="2" />
+<text  x="1032.74" y="191.5" >schedule</text>
 </g>
 <g >
-<title>pty_write (111,900,859 samples, 10.90%)</title><rect x="1024.9" y="213" width="128.7" height="15.0" fill="rgb(210,23,5)" rx="2" ry="2" />
-<text  x="1027.93" y="223.5" >pty_write</text>
+<title>wait_woken (15,802,694 samples, 6.63%)</title><rect x="1029.7" y="213" width="78.3" height="15.0" fill="rgb(236,146,35)" rx="2" ry="2" />
+<text  x="1032.74" y="223.5" >wait_woken</text>
 </g>
 <g >
-<title>sched_tick (15,304,794 samples, 1.49%)</title><rect x="1118.4" y="53" width="17.6" height="15.0" fill="rgb(238,155,37)" rx="2" ry="2" />
-<text  x="1121.40" y="63.5" ></text>
+<title>ttwu_queue_wakelist (3,969,341 samples, 1.67%)</title><rect x="878.5" y="85" width="19.7" height="15.0" fill="rgb(209,19,4)" rx="2" ry="2" />
+<text  x="881.54" y="95.5" ></text>
 </g>
 <g >
-<title>&lt;&amp;std::io::stdio::Stdout as std::io::Write&gt;::write_fmt (204,757,103 samples, 19.95%)</title><rect x="954.6" y="469" width="235.4" height="15.0" fill="rgb(206,8,1)" rx="2" ry="2" />
-<text  x="957.59" y="479.5" >&lt;&amp;std::io::stdio::Stdout as std..</text>
+<title>n_tty_write (161,569,170 samples, 67.82%)</title><rect x="307.7" y="229" width="800.3" height="15.0" fill="rgb(210,23,5)" rx="2" ry="2" />
+<text  x="310.71" y="239.5" >n_tty_write</text>
 </g>
 <g >
-<title>ttwu_queue_wakelist (21,721,667 samples, 2.12%)</title><rect x="1042.5" y="101" width="25.0" height="15.0" fill="rgb(209,19,4)" rx="2" ry="2" />
-<text  x="1045.53" y="111.5" >t..</text>
+<title>__virt_addr_valid (4,000,062 samples, 1.68%)</title><rect x="279.6" y="181" width="19.9" height="15.0" fill="rgb(216,53,12)" rx="2" ry="2" />
+<text  x="282.64" y="191.5" ></text>
 </g>
 <g >
-<title>try_to_wake_up (21,721,667 samples, 2.12%)</title><rect x="1042.5" y="117" width="25.0" height="15.0" fill="rgb(220,70,16)" rx="2" ry="2" />
-<text  x="1045.53" y="127.5" >t..</text>
+<title>dequeue_task (15,802,694 samples, 6.63%)</title><rect x="1029.7" y="133" width="78.3" height="15.0" fill="rgb(244,183,43)" rx="2" ry="2" />
+<text  x="1032.74" y="143.5" >dequeue_t..</text>
 </g>
 <g >
-<title>hrtimer_interrupt (15,304,794 samples, 1.49%)</title><rect x="1118.4" y="117" width="17.6" height="15.0" fill="rgb(228,109,26)" rx="2" ry="2" />
-<text  x="1121.40" y="127.5" ></text>
+<title>schedule_timeout (15,802,694 samples, 6.63%)</title><rect x="1029.7" y="197" width="78.3" height="15.0" fill="rgb(234,137,32)" rx="2" ry="2" />
+<text  x="1032.74" y="207.5" >schedule_..</text>
 </g>
 <g >
-<title>&lt;std::io::stdio::StdoutLock as std::io::Write&gt;::write_all (204,757,103 samples, 19.95%)</title><rect x="954.6" y="421" width="235.4" height="15.0" fill="rgb(253,225,53)" rx="2" ry="2" />
-<text  x="957.59" y="431.5" >&lt;std::io::stdio::StdoutLock as ..</text>
+<title>entry_SYSCALL_64 (2,742,275 samples, 1.15%)</title><rect x="157.6" y="373" width="13.6" height="15.0" fill="rgb(239,156,37)" rx="2" ry="2" />
+<text  x="160.63" y="383.5" ></text>
 </g>
 <g >
-<title>all (1,026,347,497 samples, 100%)</title><rect x="10.0" y="549" width="1180.0" height="15.0" fill="rgb(213,39,9)" rx="2" ry="2" />
-<text  x="13.00" y="559.5" ></text>
+<title>_raw_spin_lock_irqsave (15,147,310 samples, 6.36%)</title><rect x="509.2" y="165" width="75.0" height="15.0" fill="rgb(247,195,46)" rx="2" ry="2" />
+<text  x="512.19" y="175.5" >_raw_spi..</text>
 </g>
 <g >
-<title>_int_free (15,302,416 samples, 1.49%)</title><rect x="934.6" y="469" width="17.6" height="15.0" fill="rgb(247,196,46)" rx="2" ry="2" />
-<text  x="937.57" y="479.5" ></text>
+<title>__check_object_size.part.0 (4,000,062 samples, 1.68%)</title><rect x="279.6" y="213" width="19.9" height="15.0" fill="rgb(236,142,34)" rx="2" ry="2" />
+<text  x="282.64" y="223.5" ></text>
 </g>
 <g >
-<title>core::fmt::write (204,757,103 samples, 19.95%)</title><rect x="954.6" y="453" width="235.4" height="15.0" fill="rgb(221,77,18)" rx="2" ry="2" />
-<text  x="957.59" y="463.5" >core::fmt::write</text>
+<title>std::io::stdio::_print (238,223,198 samples, 100.00%)</title><rect x="10.0" y="469" width="1180.0" height="15.0" fill="rgb(236,145,34)" rx="2" ry="2" />
+<text  x="13.00" y="479.5" >std::io::stdio::_print</text>
 </g>
 <g >
-<title>tty_write (144,169,306 samples, 14.05%)</title><rect x="989.8" y="293" width="165.7" height="15.0" fill="rgb(234,134,32)" rx="2" ry="2" />
-<text  x="992.75" y="303.5" >tty_write</text>
+<title>ksys_write (197,014,560 samples, 82.70%)</title><rect x="191.9" y="309" width="975.9" height="15.0" fill="rgb(205,4,1)" rx="2" ry="2" />
+<text  x="194.89" y="319.5" >ksys_write</text>
 </g>
 <g >
-<title>demo::main (206,866,882 samples, 20.16%)</title><rect x="952.2" y="501" width="237.8" height="15.0" fill="rgb(224,91,21)" rx="2" ry="2" />
-<text  x="955.16" y="511.5" >demo::main</text>
+<title>__task_rq_lock (20,460,283 samples, 8.59%)</title><rect x="726.9" y="85" width="101.4" height="15.0" fill="rgb(236,146,35)" rx="2" ry="2" />
+<text  x="729.91" y="95.5" >__task_rq_lock</text>
 </g>
 <g >
-<title>tty_insert_flip_string_and_push_buffer (111,900,859 samples, 10.90%)</title><rect x="1024.9" y="197" width="128.7" height="15.0" fill="rgb(217,55,13)" rx="2" ry="2" />
-<text  x="1027.93" y="207.5" >tty_insert_flip_..</text>
+<title>iterate_tty_write (184,949,808 samples, 77.64%)</title><rect x="191.9" y="245" width="916.1" height="15.0" fill="rgb(225,95,22)" rx="2" ry="2" />
+<text  x="194.89" y="255.5" >iterate_tty_write</text>
 </g>
 <g >
-<title>demo (1,026,347,497 samples, 100.00%)</title><rect x="10.0" y="533" width="1180.0" height="15.0" fill="rgb(243,179,42)" rx="2" ry="2" />
-<text  x="13.00" y="543.5" >demo</text>
+<title>&lt;std::io::stdio::StdoutLock as std::io::Write&gt;::write_all (223,259,229 samples, 93.72%)</title><rect x="61.9" y="405" width="1105.9" height="15.0" fill="rgb(253,225,53)" rx="2" ry="2" />
+<text  x="64.90" y="415.5" >&lt;std::io::stdio::StdoutLock as std::io::Write&gt;::write_all</text>
 </g>
 <g >
-<title>_int_free (2,109,779 samples, 0.21%)</title><rect x="952.2" y="485" width="2.4" height="15.0" fill="rgb(247,196,46)" rx="2" ry="2" />
-<text  x="955.16" y="495.5" ></text>
+<title>do_syscall_64 (6,414,906 samples, 2.69%)</title><rect x="125.9" y="373" width="31.7" height="15.0" fill="rgb(209,20,4)" rx="2" ry="2" />
+<text  x="128.86" y="383.5" >do..</text>
 </g>
 <g >
-<title>__x64_sys_write (144,169,306 samples, 14.05%)</title><rect x="989.8" y="341" width="165.7" height="15.0" fill="rgb(246,189,45)" rx="2" ry="2" />
-<text  x="992.75" y="351.5" >__x64_sys_write</text>
+<title>__memmove_avx_unaligned_erms (4,487,129 samples, 1.88%)</title><rect x="1167.8" y="453" width="22.2" height="15.0" fill="rgb(205,0,0)" rx="2" ry="2" />
+<text  x="1170.77" y="463.5" >_..</text>
 </g>
 <g >
-<title>nohz_balancer_kick (15,289,208 samples, 1.49%)</title><rect x="899.4" y="341" width="17.6" height="15.0" fill="rgb(225,93,22)" rx="2" ry="2" />
-<text  x="902.40" y="351.5" ></text>
+<title>entry_SYSCALL_64_after_hwframe (201,189,511 samples, 84.45%)</title><rect x="171.2" y="373" width="996.6" height="15.0" fill="rgb(218,63,15)" rx="2" ry="2" />
+<text  x="174.21" y="383.5" >entry_SYSCALL_64_after_hwframe</text>
 </g>
 <g >
-<title>wake_up_process (21,721,667 samples, 2.12%)</title><rect x="1042.5" y="133" width="25.0" height="15.0" fill="rgb(213,37,8)" rx="2" ry="2" />
-<text  x="1045.53" y="143.5" >w..</text>
+<title>kick_pool (34,581,193 samples, 14.52%)</title><rect x="726.9" y="133" width="171.3" height="15.0" fill="rgb(244,181,43)" rx="2" ry="2" />
+<text  x="729.91" y="143.5" >kick_pool</text>
 </g>
 <g >
-<title>file_tty_write.isra.0 (144,169,306 samples, 14.05%)</title><rect x="989.8" y="277" width="165.7" height="15.0" fill="rgb(244,182,43)" rx="2" ry="2" />
-<text  x="992.75" y="287.5" >file_tty_write.isra.0</text>
+<title>_raw_spin_lock (11,881,139 samples, 4.99%)</title><rect x="668.1" y="133" width="58.8" height="15.0" fill="rgb(239,160,38)" rx="2" ry="2" />
+<text  x="671.06" y="143.5" >_raw_s..</text>
 </g>
 <g >
-<title>ksys_write (144,169,306 samples, 14.05%)</title><rect x="989.8" y="325" width="165.7" height="15.0" fill="rgb(205,4,1)" rx="2" ry="2" />
-<text  x="992.75" y="335.5" >ksys_write</text>
+<title>check_heap_object (4,000,062 samples, 1.68%)</title><rect x="279.6" y="197" width="19.9" height="15.0" fill="rgb(241,165,39)" rx="2" ry="2" />
+<text  x="282.64" y="207.5" ></text>
 </g>
 <g >
-<title>add_wait_queue (15,304,476 samples, 1.49%)</title><rect x="989.8" y="229" width="17.5" height="15.0" fill="rgb(248,198,47)" rx="2" ry="2" />
-<text  x="992.75" y="239.5" ></text>
+<title>__x64_sys_write (1,666,666 samples, 0.70%)</title><rect x="171.2" y="341" width="8.3" height="15.0" fill="rgb(246,189,45)" rx="2" ry="2" />
+<text  x="174.21" y="351.5" ></text>
 </g>
 <g >
-<title>__queue_work (65,996,432 samples, 6.43%)</title><rect x="1042.5" y="165" width="75.9" height="15.0" fill="rgb(212,34,8)" rx="2" ry="2" />
-<text  x="1045.53" y="175.5" >__queue_..</text>
+<title>tty_insert_flip_string_and_push_buffer (13,945,803 samples, 5.85%)</title><rect x="384.5" y="181" width="69.1" height="15.0" fill="rgb(217,55,13)" rx="2" ry="2" />
+<text  x="387.48" y="191.5" >tty_ins..</text>
 </g>
 <g >
-<title>update_process_times (30,593,477 samples, 2.98%)</title><rect x="899.4" y="389" width="35.2" height="15.0" fill="rgb(250,209,50)" rx="2" ry="2" />
-<text  x="902.40" y="399.5" >up..</text>
+<title>__x64_sys_write (197,014,560 samples, 82.70%)</title><rect x="191.9" y="325" width="975.9" height="15.0" fill="rgb(246,189,45)" rx="2" ry="2" />
+<text  x="194.89" y="335.5" >__x64_sys_write</text>
 </g>
 <g >
-<title>update_cfs_group (15,304,794 samples, 1.49%)</title><rect x="1118.4" y="37" width="17.6" height="15.0" fill="rgb(242,174,41)" rx="2" ry="2" />
-<text  x="1121.40" y="47.5" ></text>
+<title>__check_object_size (4,000,062 samples, 1.68%)</title><rect x="279.6" y="229" width="19.9" height="15.0" fill="rgb(226,98,23)" rx="2" ry="2" />
+<text  x="282.64" y="239.5" ></text>
 </g>
 <g >
-<title>ldsem_down_read (1,666,666 samples, 0.16%)</title><rect x="1153.6" y="245" width="1.9" height="15.0" fill="rgb(239,157,37)" rx="2" ry="2" />
-<text  x="1156.59" y="255.5" ></text>
+<title>clear_pending_if_disabled (1,666,666 samples, 0.70%)</title><rect x="584.2" y="165" width="8.3" height="15.0" fill="rgb(222,82,19)" rx="2" ry="2" />
+<text  x="587.22" y="175.5" ></text>
 </g>
 <g >
-<title>x64_sys_call (15,172,546 samples, 1.48%)</title><rect x="1155.5" y="373" width="17.4" height="15.0" fill="rgb(247,194,46)" rx="2" ry="2" />
-<text  x="1158.50" y="383.5" ></text>
+<title>__raw_spin_lock_irqsave (10,151,569 samples, 4.26%)</title><rect x="828.3" y="69" width="50.2" height="15.0" fill="rgb(233,132,31)" rx="2" ry="2" />
+<text  x="831.25" y="79.5" >__raw..</text>
 </g>
 <g >
-<title>do_syscall_64 (144,169,306 samples, 14.05%)</title><rect x="989.8" y="373" width="165.7" height="15.0" fill="rgb(209,20,4)" rx="2" ry="2" />
-<text  x="992.75" y="383.5" >do_syscall_64</text>
+<title>do_output_char (13,945,803 samples, 5.85%)</title><rect x="384.5" y="213" width="69.1" height="15.0" fill="rgb(247,197,47)" rx="2" ry="2" />
+<text  x="387.48" y="223.5" >do_outp..</text>
 </g>
 <g >
-<title>[unknown] (1,026,347,497 samples, 100.00%)</title><rect x="10.0" y="517" width="1180.0" height="15.0" fill="rgb(210,24,5)" rx="2" ry="2" />
-<text  x="13.00" y="527.5" >[unknown]</text>
+<title>arch_exit_to_user_mode_prepare.isra.0 (2,508,285 samples, 1.05%)</title><rect x="179.5" y="341" width="12.4" height="15.0" fill="rgb(251,215,51)" rx="2" ry="2" />
+<text  x="182.47" y="351.5" ></text>
 </g>
 <g >
-<title>iterate_tty_write (142,502,640 samples, 13.88%)</title><rect x="989.8" y="261" width="163.8" height="15.0" fill="rgb(225,95,22)" rx="2" ry="2" />
-<text  x="992.75" y="271.5" >iterate_tty_write</text>
+<title>&lt;&amp;std::io::stdio::Stdout as std::io::Write&gt;::write_fmt (233,736,069 samples, 98.12%)</title><rect x="10.0" y="453" width="1157.8" height="15.0" fill="rgb(206,8,1)" rx="2" ry="2" />
+<text  x="13.00" y="463.5" >&lt;&amp;std::io::stdio::Stdout as std::io::Write&gt;::write_fmt</text>
 </g>
 <g >
-<title>pwq_tryinc_nr_active (44,274,765 samples, 4.31%)</title><rect x="1067.5" y="149" width="50.9" height="15.0" fill="rgb(248,202,48)" rx="2" ry="2" />
-<text  x="1070.50" y="159.5" >pwq_t..</text>
+<title>pty_write (13,945,803 samples, 5.85%)</title><rect x="384.5" y="197" width="69.1" height="15.0" fill="rgb(210,23,5)" rx="2" ry="2" />
+<text  x="387.48" y="207.5" >pty_write</text>
 </g>
 <g >
-<title>__hrtimer_run_queues (30,593,477 samples, 2.98%)</title><rect x="899.4" y="421" width="35.2" height="15.0" fill="rgb(237,150,35)" rx="2" ry="2" />
-<text  x="902.40" y="431.5" >__..</text>
+<title>native_queued_spin_lock_slowpath (11,881,139 samples, 4.99%)</title><rect x="668.1" y="117" width="58.8" height="15.0" fill="rgb(238,153,36)" rx="2" ry="2" />
+<text  x="671.06" y="127.5" >native..</text>
 </g>
 <g >
-<title>sched_tick (30,593,477 samples, 2.98%)</title><rect x="899.4" y="373" width="35.2" height="15.0" fill="rgb(238,155,37)" rx="2" ry="2" />
-<text  x="902.40" y="383.5" >sc..</text>
+<title>do_syscall_64 (201,189,511 samples, 84.45%)</title><rect x="171.2" y="357" width="996.6" height="15.0" fill="rgb(209,20,4)" rx="2" ry="2" />
+<text  x="174.21" y="367.5" >do_syscall_64</text>
 </g>
 <g >
-<title>queue_work_on (111,900,859 samples, 10.90%)</title><rect x="1024.9" y="181" width="128.7" height="15.0" fill="rgb(248,200,48)" rx="2" ry="2" />
-<text  x="1027.93" y="191.5" >queue_work_on</text>
+<title>mutex_unlock (12,064,752 samples, 5.06%)</title><rect x="1108.0" y="245" width="59.8" height="15.0" fill="rgb(251,212,50)" rx="2" ry="2" />
+<text  x="1111.01" y="255.5" >mutex_..</text>
 </g>
 <g >
-<title>clear_bhb_loop (15,302,558 samples, 1.49%)</title><rect x="972.2" y="373" width="17.6" height="15.0" fill="rgb(240,162,38)" rx="2" ry="2" />
-<text  x="975.16" y="383.5" ></text>
+<title>demo::main (238,223,198 samples, 100.00%)</title><rect x="10.0" y="485" width="1180.0" height="15.0" fill="rgb(224,91,21)" rx="2" ry="2" />
+<text  x="13.00" y="495.5" >demo::main</text>
 </g>
 <g >
-<title>update_curr (15,304,269 samples, 1.49%)</title><rect x="917.0" y="325" width="17.6" height="15.0" fill="rgb(227,105,25)" rx="2" ry="2" />
-<text  x="919.97" y="335.5" ></text>
+<title>dequeue_entity (15,802,694 samples, 6.63%)</title><rect x="1029.7" y="85" width="78.3" height="15.0" fill="rgb(233,130,31)" rx="2" ry="2" />
+<text  x="1032.74" y="95.5" >dequeue_e..</text>
 </g>
 <g >
-<title>cfree@GLIBC_2.2.5 (15,302,416 samples, 1.49%)</title><rect x="934.6" y="485" width="17.6" height="15.0" fill="rgb(233,131,31)" rx="2" ry="2" />
-<text  x="937.57" y="495.5" ></text>
+<title>core::fmt::write (223,259,229 samples, 93.72%)</title><rect x="61.9" y="437" width="1105.9" height="15.0" fill="rgb(221,77,18)" rx="2" ry="2" />
+<text  x="64.90" y="447.5" >core::fmt::write</text>
 </g>
 <g >
-<title>__raw_spin_lock_irqsave (15,304,476 samples, 1.49%)</title><rect x="989.8" y="213" width="17.5" height="15.0" fill="rgb(233,132,31)" rx="2" ry="2" />
-<text  x="992.75" y="223.5" ></text>
+<title>x64_sys_call (197,014,560 samples, 82.70%)</title><rect x="191.9" y="341" width="975.9" height="15.0" fill="rgb(247,194,46)" rx="2" ry="2" />
+<text  x="194.89" y="351.5" >x64_sys_call</text>
 </g>
 <g >
-<title>down_read (15,297,305 samples, 1.49%)</title><rect x="1007.3" y="229" width="17.6" height="15.0" fill="rgb(246,188,45)" rx="2" ry="2" />
-<text  x="1010.35" y="239.5" ></text>
+<title>_raw_spin_lock (20,460,283 samples, 8.59%)</title><rect x="726.9" y="53" width="101.4" height="15.0" fill="rgb(239,160,38)" rx="2" ry="2" />
+<text  x="729.91" y="63.5" >_raw_spin_lock</text>
 </g>
 <g >
-<title>__GI___libc_write (174,644,410 samples, 17.02%)</title><rect x="972.2" y="405" width="200.7" height="15.0" fill="rgb(217,57,13)" rx="2" ry="2" />
-<text  x="975.16" y="415.5" >__GI___libc_write</text>
+<title>tty_buffer_space_avail (10,582,756 samples, 4.44%)</title><rect x="908.4" y="197" width="52.4" height="15.0" fill="rgb(220,69,16)" rx="2" ry="2" />
+<text  x="911.40" y="207.5" >tty_b..</text>
 </g>
 <g >
-<title>std::io::stdio::_print (204,757,103 samples, 19.95%)</title><rect x="954.6" y="485" width="235.4" height="15.0" fill="rgb(236,145,34)" rx="2" ry="2" />
-<text  x="957.59" y="495.5" >std::io::stdio::_print</text>
+<title>up_read (13,913,355 samples, 5.84%)</title><rect x="960.8" y="213" width="68.9" height="15.0" fill="rgb(209,18,4)" rx="2" ry="2" />
+<text  x="963.82" y="223.5" >up_read</text>
+</g>
+<g >
+<title>_raw_spin_unlock_irqrestore (13,945,803 samples, 5.85%)</title><rect x="384.5" y="165" width="69.1" height="15.0" fill="rgb(228,106,25)" rx="2" ry="2" />
+<text  x="387.48" y="175.5" >_raw_sp..</text>
 </g>
 </g>
 </svg>

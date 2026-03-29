@@ -5,18 +5,9 @@ pub mod concurrency;
 /// Здесь намеренно используется `get_unchecked` с off-by-one,
 /// из-за чего возникает UB при доступе за пределы среза.
 pub fn sum_even(values: &[i64]) -> i64 {
-    let mut acc = 0;
-    for idx in 0..values.len() {
-        // SAFETY
-        // - длины памяти values должно хватать на idx элементов с типом i64
-        let v = unsafe {
-            *values.get_unchecked(idx)
-        };
-        if v % 2 == 0 {
-            acc += v;
-        }
-    }
-    acc
+    values.iter().filter(|x| {
+        *x % 2 == 0
+    }).sum()
 }
 
 /// Подсчёт ненулевых байтов. Буфер намеренно не освобождается,
@@ -46,7 +37,13 @@ pub fn leak_buffer(input: &[u8]) -> usize {
 /// Небрежная нормализация строки: удаляем пробелы и приводим к нижнему регистру,
 /// но игнорируем повторяющиеся пробелы/табуляции внутри текста.
 pub fn normalize(input: &str) -> String {
-    input.replace(' ', "").to_lowercase()
+    let mut result = String::with_capacity(input.len());
+    for c in input.chars() {
+        if c != ' ' {
+            result.push(c.to_ascii_lowercase());
+        }
+    }
+    result
 }
 
 /// Логическая ошибка: усредняет по всем элементам, хотя требуется учитывать
